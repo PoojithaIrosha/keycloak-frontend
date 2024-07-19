@@ -1,0 +1,20 @@
+<div class="grid-container p-4">
+  <h1 class="mat-h1">Posts</h1>
+  <mat-grid-list cols="1">
+      <div class="py-2" *ngFor="let post of posts$ | async">
+        <mat-card class="dashboard-card w-full py-5 px-12">
+          <mat-card-header>
+
+            <mat-card-title>
+              <img src="favicon.ico">
+              {{ post.title }}
+            </mat-card-title>
+
+          </mat-card-header>
+          <mat-card-content class="dashboard-card-content">
+            <div>{{ post.body }}</div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+  </mat-grid-list>
+</div>
